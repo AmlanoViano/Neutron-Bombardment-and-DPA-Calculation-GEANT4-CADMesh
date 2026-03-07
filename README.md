@@ -77,6 +77,16 @@ Each of the threads used writes its own file (`neutron_hits_DT_nt_Hits_t0.csv` .
 `t11.csv`). These are merged in post-processing. Two separate runs are performed - 
 one for the D-T source and one for the T-D source - giving 200,000 total events combined.
 
+The neutron flux per 1-degree angle bin is:
+
+$$\phi(\theta) = \frac{N_{\text{hits}}(\theta)}{N_{\text{simulated}}} \cdot \frac{S_{\text{source}}}{A_{\text{wall}}}$$
+
+where $S_{\text{source}} = 10^{20}$ n/s is the ITER-equivalent neutron source strength 
+($\approx 500$ MW fusion power), and $A_{\text{wall}}$ is the torus outer surface area 
+computed automatically from the STL vertex coordinates:
+
+$$A_{\text{wall}} = (2\pi R)(2\pi a_{\text{out}})$$
+
 ## Simulation Pipeline Summary
 
 The simulation has been completely summarised below:
