@@ -6,8 +6,7 @@ This simulation is based on Geant4, using C++ and Python to simulate neutron bea
 The neutron source simulates plasma within a magnetically confined fusion reactor. 
 Neutron birth positions are determined via rejection sampling inside a toroidal plasma 
 volume with major radius $R = 500$ mm and minor radius $f_a = 18$ mm. A point 
-$(x, y, z)$ is randomly drawn from the bounding box and retained only if it falls 
-within the torus boundary:
+$(x, y, z)$ is randomly drawn from the bounding box and eliminated if it falls outside the boundary:
 
 $$\left(\sqrt{x^2 + y^2} - R\right)^2 + z^2 < f_a^2$$
 
